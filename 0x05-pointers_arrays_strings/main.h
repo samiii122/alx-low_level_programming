@@ -15,5 +15,3 @@ int _atoi(char *s);
 
 #define main
 #endif
-Footer
-
