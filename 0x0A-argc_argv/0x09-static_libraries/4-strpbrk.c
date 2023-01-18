@@ -1,29 +1,27 @@
 #include "main.h"
-/**
-*_strpbrk - The _strpbrk() function locates the first
-* occurrence in the string s of any of the bytes in
-*the string accept
-*
-*@s: string where search is made
-*@accept: string where searched bytes are located
-*
-*Return:Returns a pointer to the byte in s that matches
-* one of the bytes in accept, or NULL if no such byte is found
-*/
+#include <stdio.h>
 
+/**
+ * _strpbrk - bytes
+ * @s: char pointer
+ * @accept: char pointer
+ * Return: Null
+ */
 char *_strpbrk(char *s, char *accept)
 {
-	int i;
+	int a;
 
 	while (*s)
 	{
-		for (i = 0; accept[i]; i++)
+		for (a = 0; accept[a]; a++)
 		{
-			if (accept[i] == *s)
+			if (*s == accept[a])
+			{
 				return (s);
+			}
 		}
 		s++;
 	}
 
-	return ('\0');
+	return (NULL);
 }
